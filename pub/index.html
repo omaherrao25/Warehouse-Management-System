@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warehouse Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">ShipSmart</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('home');">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('products');">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('orders');">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('shipping');">Shipping</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('report');">Report</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section id="home" class="section py-5 bg-custom">
+            <div class="container text-center mb-5">
+                <h1 class="display-4 fw-bold">
+                    Welcome to Warehouse Management System
+                </h1>
+                <p class="lead text-muted">
+                    Effortlessly manage products, orders, and shipping to streamline
+                    your business.
+                </p>
+                <!-- <button class="btn btn-primary btn-lg">Get Started</button> -->
+            </div>
+
+            <hr class="my-5" />
+
+            <div class="container mb-5">
+                <h2 class="text-center mb-4">Product Category</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="https://images.pexels.com/photos/270640/pexels-photo-270640.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top" alt="Product 1" />
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Electronics</h5>
+                                <p class="card-text text-muted">
+                                    This category includes a wide range of devices designed for
+                                    entertainment, communication, and daily convenience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top" alt="Product 2" />
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Home Appliances</h5>
+                                <p class="card-text text-muted">
+                                    This category includes products like refrigerators, washing
+                                    machines, dishwashers, air conditioners, and microwaves.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top" alt="Product 3" />
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Furniture</h5>
+                                <p class="card-text text-muted">
+                                    This category includes sofas, chairs, tables, beds,
+                                    cabinets, and storage solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5" />
+
+            <div class="container text-center mb-5">
+                <h2 class="mb-4">Order Management</h2>
+                <div style="display: flex; justify-content: center; margin-bottom: 2rem">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="https://images.pexels.com/photos/4483775/pexels-photo-4483775.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top" alt="Order" />
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted" style="margin-top: 1rem">
+                    Easily manage and track all customer orders, ensuring smooth and
+                    timely deliveries.
+                </p>
+            </div>
+
+            <hr class="my-5" />
+
+            <div class="container text-center">
+                <h2 class="mb-4">Shipping Management</h2>
+                <div style="display: flex; justify-content: center; margin-bottom: 2rem">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="card-img-top" alt="Order" />
+                        </div>
+                    </div>
+                </div>
+                <p class="text-muted" style="margin-top: 1rem">
+                    Track and manage all shipments efficiently, keeping your business on
+                    schedule.
+                </p>
+            </div>
+        </section>
+
+        <section id="products" class="section d-none bg-custom">
+            <div id="inputContainer"
+                style="display: flex; justify-content: center; gap: 15px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+                <select id="categorySelect" class="form-select" oninput="debounce(getProductDetailsByCategory)"
+                    style="padding: 8px; width: 220px;">
+                    <option selected>Select Category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="home appliances">Home Appliances</option>
+                </select>
+
+                <form action="javascript:void(0);" style="margin: 0">
+                    <input type="text" id="productName" class="form-control" placeholder="Enter Product Name"
+                        oninput="debounce(getProductDetailsByProductName)" style="padding: 8px; width: 220px;" />
+                </form>
+
+                <button id="addProductButton" class="btn btn-outline-primary">Add Product</button>
+            </div>
+
+            <div id="addProductFormContainer" style="display: none; margin-top: 20px;">
+                <div class="container d-flex justify-content-center">
+                    <div class="border rounded p-4 shadow-lg bg-body-tertiary" style="max-width: 400px; width: 100%;">
+                        <form id="addProductForm" class="row g-4 needs-validation" novalidate>
+                            <div class="col-12">
+                                <label for="productNameInput" class="form-label">Product Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" id="productNameInput" class="form-control"
+                                    pattern="^[A-Za-z ]{1,50}$" placeholder="Enter Product Name" required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid name (letters and spaces only).
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="productDescription" class="form-label">Description <span
+                                        class="text-danger">*</span></label>
+                                <textarea id="productDescription" class="form-control"
+                                    placeholder="Enter Product Description" rows="3" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide a description.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="productCategory" class="form-label">Category <span
+                                        class="text-danger">*</span></label>
+                                <select id="productCategory" class="form-select" required>
+                                    <option selected disabled>Select Category</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="furniture">Furniture</option>
+                                    <option value="home appliances">Home Appliances</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a category.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="productStock" class="form-label">Stock Quantity <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" id="productStock" class="form-control" pattern="^\d+$"
+                                    placeholder="Enter Stock Quantity" required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid stock quantity (numbers only).
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="productPrice" class="form-label">Price<span
+                                        class="text-danger">*</span></label>
+                                <input type="number" id="productPrice" class="form-control" placeholder="Enter Price/unit"
+                                    pattern="^\d+$" required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid price (numbers only).
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h3 class="text-center">Available Products</h3>
+                <hr class="highlight-line mb-5" />
+                <div class="row" id="product-list"
+                    style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <!-- Product cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="orders" class="section d-none bg-custom">
+            <div id="orderInputContainer"
+                style="display: flex; justify-content: center; gap: 15px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+                <form action="javascript:void(0);" style="margin: 0">
+                    <input type="text" id="orderno" class="form-control" placeholder="Enter Order number"
+                        oninput="debounce(getOrderDetailsByOrderno)" style="padding: 8px; width: 220px;" />
+                </form>
+
+                <button id="addOrderButton" class="btn btn-outline-primary">Add Order</button>
+            </div>
+
+            <div id="addOrderFormContainer" style="display: none; margin-top: 20px;">
+                <div class="container d-flex justify-content-center">
+                    <div class="border rounded p-4 shadow-lg bg-body-tertiary" style="max-width: 400px; width: 100%;">
+                        <form id="addOrderForm" class="row g-4 needs-validation" novalidate>
+                            <div class="col-12">
+                                <label for="nameInput" class="form-label">Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" id="nameInput" class="form-control" pattern="^[A-Za-z ]{1,50}$"
+                                    placeholder="Enter Your Name" required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid name (letters and spaces only).
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="mobile" class="form-label">Mobile <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="mobile" pattern="^[6-9]\d{9}$"
+                                    placeholder="Enter Mobile number" required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid Mobile number.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter Email"
+                                    required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid Email address.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="shippingAddress" class="form-label">Shipping Address <span
+                                        class="text-danger">*</span></label>
+                                <textarea id="shippingAddress" class="form-control" placeholder="Enter Shipping Address"
+                                    rows="3" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide a shipping address.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="orderType" class="form-label">Order Type <span
+                                        class="text-danger">*</span></label>
+                                <select id="orderType" class="form-select" required>
+                                    <option selected disabled>Select Category</option>
+                                    <option value="new">New</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a Order Type.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="productQuantity" class="form-label">Quantity <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" id="productQuantity" class="form-control"
+                                    placeholder="Enter Quantity" required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid quantity (numbers only).
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="productId" class="form-label">Product Id <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" id="productId" class="form-control" placeholder="Enter ProductId"
+                                    required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid ProductId (numbers only).
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h3 class="text-center">All Orders</h3>
+                <hr class="highlight-line mb-5" />
+                <div class="row" id="order-list"
+                    style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <!-- Order cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="shipping" class="section d-none bg-custom">
+            <div id="shippingInputContainer"
+                style="display: flex; justify-content: center; gap: 15px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+                <form action="javascript:void(0);" style="margin: 0">
+                    <input type="text" id="trackingNo" class="form-control" placeholder="Enter Tracking number"
+                        oninput="debounce(getShippingDetailsByTrackingNo)" style="padding: 8px; width: 220px;" />
+                </form>
+
+                <label for="shippingDate" class="form-label">Shipping Date</label>
+                <input type="date" class="form-control" id="shippingDate"
+                    oninput="debounce(generateReportByShippingDate)" style="padding: 8px; width: 220px" required>
+                <div class="invalid-feedback" id="dateErrorMessage" style="display: none;">
+                    Please select a Shipping date.
+                </div>
+
+                <button id="addShippingButton" class="btn btn-outline-primary">Add Shipment</button>
+            </div>
+
+            <div id="addShippingFormContainer" style="display: none; margin-top: 20px;">
+                <div class="container d-flex justify-content-center">
+                    <div class="border rounded p-4 shadow-lg bg-body-tertiary" style="max-width: 400px; width: 100%;">
+                        <form id="addShippingForm" class="row g-4 needs-validation" novalidate>
+                            <div class="col-12">
+                                <label for="shippingStatus" class="form-label">Shipping Status <span
+                                        class="text-danger">*</span></label>
+                                <select id="shippingStatus" class="form-select" required>
+                                    <option selected disabled>Select Status</option>
+                                    <option value="shipped">Shipped</option>
+                                    <option value="delivered">Delivered</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a Shipping Status.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="shippedDate" class="form-label">Shipping Date <span
+                                        class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="shippedDate" required />
+                                <div class="invalid-feedback">
+                                    Please select a Shipping date.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="deliveredDate" class="form-label">Delivered Date <span
+                                        class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="deliveredDate" required />
+                                <div class="invalid-feedback">
+                                    Please select a Delivered date.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="carrierName" class="form-label">Carrier Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" id="carrierName" class="form-control" pattern="^[A-Za-z ]{1,50}$"
+                                    placeholder="Enter Carrier Name" required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid Carrier name (letters and spaces only).
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="orderId" class="form-label">Order Id <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" id="orderId" class="form-control" pattern="^ORD\d+$"
+                                    placeholder="Enter Order Id" required />
+                                <div class="invalid-feedback">
+                                    Please provide a valid Order Id (starts with 'ORD').
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h3 class="text-center">All Shipments</h3>
+                <hr class="highlight-line mb-5" />
+                <div class="row" id="shipping-list"
+                    style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <!-- Shipping cards will be injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">
+                &copy; 2025 Warehouse Management System. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
