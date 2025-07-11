@@ -4,12 +4,12 @@ This project implements a Warehouse Management System using **webMethods Integra
 
 ## 📌 Project Overview
 
-This system was developed as part of a use case provided during **webMethods training at Kraft Software Solutions**.
+This system was developed as part of a use case provided during **webMethods training at VKraft Software Solutions**.
 
 ### 💡 Features
 
 - API integration using webMethods
-- Input validation (mandatory fields, order number, room availability)
+- Input validation (mandatory fields, order number, product name, shipping date)
 - Persistent storage to the database
 - Modular design separating concerns of Order, Product, and Shipping entities
 
