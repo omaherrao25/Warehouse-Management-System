@@ -23,6 +23,13 @@ This system was developed as part of a use case provided during **webMethods tra
 | `getProductByProductId`   | Fetches specific product by ID        |
 | `getAllShipping`          | Fetches all shipping entries          |
 | `getShippingByShippingId`| Fetches specific shipping info by ID  |
+| `getProductByName`| Fetches specific product info by product name  |
+| `getProductByCategory`| Fetches specific product info by category name  |
+| `getShippingByTrackingNo`| Fetches specific shipping info by tracking number  |
+| `getShippingByDate`| Fetches specific shipping info by date  |
+| `insertNewOrderDetails`| Insert new order instance in database  |
+| `insertProductDetails`| Insert new product instance in database  |
+| `insertShippingDetails`| Insert new shipping instance in database  |
 
 ## 🛠 Technologies Used
 
