@@ -31,3 +31,9 @@ This system was developed as part of a use case provided during **webMethods tra
 - **Oracle Database**
 - **HTML/CSS/JavaScript**
 - **GitHub** for version control and collaboration
+
+### 📊 System Architecture
+![Use Case Diagram](https://raw.githubusercontent.com/omaherrao25/Warehouse-Management-System/main/screenshots/usecase-diagram.png)
+
+### 🧠 High-Level Design
+![High Level Design](https://raw.githubusercontent.com/omaherrao25/Warehouse-Management-System/main/screenshots/highlevel-design.png)
